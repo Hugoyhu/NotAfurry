@@ -1,3 +1,4 @@
+import re
 import os
 from slack_bolt import App
 
@@ -13,6 +14,12 @@ app = App(
 @app.message("fuzzy")
 def message_hello(message, say):
     # say() sends a message to the channel where the event was triggered
+    say(f"NO I'M NOT! YOU ARE!")
+
+@app.message(re.compile("/.*a.*d.*r.*i.*a.*n.*f.*u.*[r|w].*[r|w].*y.*/gmi"))
+def say_hello_regex(say, context):
+    # regular expression matches are inside of context.matches
+    greeting = context['matches'][0]
     say(f"NO I'M NOT! YOU ARE!")
 
 # Start your app
