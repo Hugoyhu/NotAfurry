@@ -11,7 +11,7 @@ app = App(
 @app.message("furry")
 def message_hello(message, say):
     # say() sends a message to the channel where the event was triggered
-    say(f"NO I'M NOT, STEGGY IS! GO SPAM HIM")
+    say(f"NO I'M NOT! YOU ARE!")
 
 # Start your app
 if __name__ == "__main__":
