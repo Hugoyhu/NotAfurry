@@ -8,7 +8,9 @@ app = App(
 )
 
 # Listens to incoming messages that contain "hello"
-@app.message("furry" or "fuwwy")
+@app.message("furry")
+@app.message("fuwwy")
+@app.message("fuzzy")
 def message_hello(message, say):
     # say() sends a message to the channel where the event was triggered
     say(f"NO I'M NOT! YOU ARE!")
