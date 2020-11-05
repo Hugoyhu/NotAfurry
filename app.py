@@ -1,4 +1,3 @@
-import re
 import os
 from slack_bolt import App
 
@@ -8,13 +7,15 @@ app = App(
     signing_secret=os.environ.get("SLACK_SIGNING_SECRET")
 )
 
-# Listens to incoming messages that contain "hello"
 @app.message("furry")
 @app.message("fuwwy")
 @app.message("fuzzy")
-def message_hello(message, say):
-    # say() sends a message to the channel where the event was triggered
-    say(f"I am not, but <@UL7RXU3UJ> is")
+@app.message("fluffy")
+@app.message("fur")
+@app.message("feathery")
+def say_hello(message, say):
+    user = message['user']
+    say(f"<@{user}> NO I AM NOT")
 
 # Start your app
 if __name__ == "__main__":
