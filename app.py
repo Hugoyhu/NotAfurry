@@ -20,7 +20,7 @@ def message_hello(message, say):
 def say_hello_regex(say, context):
     # regular expression matches are inside of context.matches
     greeting = context['matches'][0]
-    say(f"NO I'M NOT! YOU ARE!")
+    say(f"UwU yes a vewwy vewwy bad fuwwy")
 
 # Start your app
 if __name__ == "__main__":
