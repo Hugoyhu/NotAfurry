@@ -8,20 +8,12 @@ app = App(
     signing_secret=os.environ.get("SLACK_SIGNING_SECRET")
 )
 
-'''
 # Listens to incoming messages that contain "hello"
 @app.message("furry")
 @app.message("fuwwy")
 @app.message("fuzzy")
 def message_hello(message, say):
     # say() sends a message to the channel where the event was triggered
-    say(f"UwU yes I'm a vewwy vewwy bad boi")
-'''
-
-@app.message(re.compile("furry|fuwwy|fuzzy"))
-def say_hello_regex(say, context):
-    # regular expression matches are inside of context.matches
-    greeting = context['matches'][0]
     say(f"I am not, but <@UL7RXU3UJ> is")
 
 # Start your app
