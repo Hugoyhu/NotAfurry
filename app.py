@@ -18,7 +18,7 @@ def message_hello(message, say):
     say(f"UwU yes I'm a vewwy vewwy bad boi")
 '''
 
-@app.message(re.compile("/.*a.*d.*r.*i.*a.*n.*f.*u.*[r|w].*[r|w].*y.*/gmi"))
+@app.message(re.compile("furry|fuwwy|fuzzy"))
 def say_hello_regex(say, context):
     # regular expression matches are inside of context.matches
     greeting = context['matches'][0]
