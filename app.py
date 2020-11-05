@@ -15,7 +15,7 @@ app = App(
 @app.message("feathery")
 def say_hello(message, say):
     user = message['user']
-    say(f"<@{user}> NO I AM NOT")
+    say(f"<@{user}> NO U :nou:")
 
 # Start your app
 if __name__ == "__main__":
