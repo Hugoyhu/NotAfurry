@@ -7,6 +7,13 @@ app = App(
     signing_secret=os.environ.get("SLACK_SIGNING_SECRET")
 )
 
+BOLT_PORT = 3000
+
+try: 
+    BOLT_PORT = int(os.environ.get('PORT'))
+except KeyError:  
+    print(f"Environment variable does not exist, using port ${port}") 
+
 @app.message("furry")
 @app.message("fuwwy")
 @app.message("fuzzy")
@@ -19,4 +26,4 @@ def say_hello(message, say):
 
 # Start your app
 if __name__ == "__main__":
-    app.start(port=int(os.environ.get("PORT", 5000)))
+    app.start(port=BOLT_PORT)
