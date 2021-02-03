@@ -20,9 +20,15 @@ except KeyError:
 @app.message("fluffy")
 @app.message("fur")
 @app.message("feathery")
+@app.message("fwuwwy")
+@app.message("fwurry")
+@app.message("fwuzzy")
+@app.message("fwur")
+@app.message("fweathery")
+@app.message("fwufry")
 def say_hello(message, say):
     user = message['user']
-    say(f"<@{user}> NO U :nou:")
+    say(f"<@{user}> NO, U :nou:")
 
 # Start your app
 if __name__ == "__main__":
